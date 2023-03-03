@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		// function get(){
+		// 	var maessage=document.getElementById("maessage").value
+
+		// 	if(maessage.length<5){
+		// 		document.getElementById("remain").innerHTML=5-maessage.length
+		// 	}
+
+		// 	else{
+		// 		document.getElementById("remain").innerHTML="limit exceeded"
+		// 	}
+		// }
+
+		function get(){
+			var storage = document.getElementById("maessage").value
+
+			if(storage.length<7){
+				document.getElementById("remain").innerHTML=7-storage.length
+			} 
+			else{
+				document.getElementById("remain").innerHTML="limit exceed"
+
+				document.getElementById("remain").style.color="red"
+			}
+		 }
+
+	</script>
+</head>
+<body>
+	<textarea onkeyup="get()" id="maessage"></textarea>
+
+	<p>Remaining left :<span id="remain"></span></p>
+</body>
+</html>
